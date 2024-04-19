@@ -1,0 +1,64 @@
+/* Navbar styles */
+nav {
+    background-color: #333;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure the navbar is above other content */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+/* Dropdown content styles */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%; /* Position below the navbar */
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    z-index: 999; /* Ensure the dropdown is above other content */
+    padding: 10px 0;
+    box-sizing: border-box;
+}
+
+.dropdown-content.show {
+    display: block;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #555;
+}
+
+/* Page content styles */
+.page-content {
+    margin-top: 60px; /* Adjust margin top to leave space for the navbar */
+    transition: margin-top 0.5s; /* Add transition effect for smooth animation */
+}
