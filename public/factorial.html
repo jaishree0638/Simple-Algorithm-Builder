@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Factorial Page</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="static/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
@@ -24,15 +24,27 @@
                 </ul>
             </nav>
         </div>
-    </header>   
+    </header>
     <div class="page-content">
         <h1 class="title">Factorial Algorithm</h1>
 
         <section id="overview" class="section">
             <h2 class="section-title">High-Level Overview</h2>
-            <img class="high-level-img" src="" /> <!-- PROVIDE THE IMAGE HERE -->
+            <img class="high-level-img" src="static/img/Factorial.png" />
             <p class="section-content">
-                Explanation for the Algorithm <!-- PROVIDE THE EXPLANATION HERE -->
+                <ol>
+                    <li>To compute the factorial of a non-negative integer n, denoted as n!,
+                        you start by initializing a variable, often named result, to 1. This
+                        variable will hold the cumulative product of numbers from 1 to n.</li>
+                    <li>You then iterate from 1 to n, multiplying the current value of result by each integer i
+                        in this range. With each iteration, update result to reflect this new product.</li>
+                    <li>The process continues until all numbers up to n are included. Once the loop finishes,
+                        result contains the value of n!, which is the factorial of n. </li>
+                    <li>This final value is then
+                        ready to be returned or output as the result. </li>
+                </ol>
+                This iterative method is simple and
+                effective for calculating factorials of small to moderate numbers.
             </p>
             <button id="next-overview" class="next-button">Next</button>
         </section>
@@ -40,7 +52,13 @@
         <section id="pseudocode" class="section" style="display: none">
             <h2 class="section-title">Pseudocode</h2>
             <p class="section-content">
-                More explanation for pseudocode <!-- PROVIDE MORE EXPLANATION HERE -->
+                function factorial(n)
+                <br>if n < 0
+                <br>    return "Error: Factorial of negative number not defined."
+                <br>result = 1
+                <br>for i from 1 to n
+                <br>    result = result * i
+                <br>return result
             </p>
             <button id="back-to-overview" class="back-button">Back</button>
             <button id="next-overview" class="next-button">Next</button>
@@ -49,7 +67,16 @@
         <section id="low-level" class="section" style="display: none">
             <h2 class="section-title">Low-Level Implementation</h2>
             <pre class="section-content">
-                Low-Level code  <!-- PROVIDE THE CODE HERE -->
+                function factorial(n) {
+                    if (n < 0) {
+                        return "Error: Factorial of negative number not defined.";
+                    }
+                    let result = 1;
+                    for (let i = 1; i <= n; i++) {
+                        result *= i;
+                    }
+                    return result;
+                }
             </pre>
             <button id="back-to-pseudocode" class="back-button">Back</button>
             <button id="next-lowlevel" class="finish-button">Finish</button>

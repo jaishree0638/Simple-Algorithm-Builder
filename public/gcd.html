@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GCD Page</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="static/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
@@ -24,15 +24,28 @@
                 </ul>
             </nav>
         </div>
-    </header>   
+    </header>
     <div class="page-content">
         <h1 class="title">Greatest Common Denominator Algorithm</h1>
 
         <section id="overview" class="section">
             <h2 class="section-title">High-Level Overview</h2>
-            <img class="high-level-img" src="" /> <!-- PROVIDE THE IMAGE HERE -->
+            <img class="high-level-img" src="static/img/GCD.png" /> <!-- PROVIDE THE IMAGE HERE -->
             <p class="section-content">
-                Explanation for the Algorithm <!-- PROVIDE THE EXPLANATION HERE -->
+                The Greatest Common Denominator (GCD), also known as the Greatest Common Divisor,
+                is most commonly calculated using the Euclidean algorithm due to its efficiency.
+                <ol>
+                    <li>To find the GCD of two numbers using this method, start by identifying which of the
+                        two numbers is larger. Let a be the larger number and b be the smaller number; if b
+                        is larger, simply swap them. </li>
+                    <li>Proceed by dividing a by b, noting down the remainder r.
+                        The essence of the algorithm is in the iterative process: replace a with b and b with r.</li>
+                    <li>Continue this sequence—dividing the new a by the new b and updating accordingly—until
+                        the remainder r becomes 0. The algorithm stops when a division yields no remainder, and
+                        at this point, b is the GCD of the original pair of numbers.</li>
+                </ol>
+                This method reduces the size
+                of the problem with each step, thus reaching the GCD efficiently.
             </p>
             <button id="next-overview" class="next-button">Next</button>
         </section>
@@ -40,7 +53,12 @@
         <section id="pseudocode" class="section" style="display: none">
             <h2 class="section-title">Pseudocode</h2>
             <p class="section-content">
-                More explanation for pseudocode <!-- PROVIDE MORE EXPLANATION HERE -->
+                function GCD(a, b)
+                <br>while b ≠ 0
+                <br>    r = a mod b
+                <br>    a = b
+                <br>    b = r
+                <br>return a
             </p>
             <button id="back-to-overview" class="back-button">Back</button>
             <button id="next-overview" class="next-button">Next</button>
@@ -49,7 +67,14 @@
         <section id="low-level" class="section" style="display: none">
             <h2 class="section-title">Low-Level Implementation</h2>
             <pre class="section-content">
-                Low-Level code  <!-- PROVIDE THE CODE HERE -->
+                function gcd(a, b) {
+                    while (b !== 0) {
+                        let r = a % b;
+                        a = b;
+                        b = r;
+                    }
+                    return a;
+                }
             </pre>
             <button id="back-to-pseudocode" class="back-button">Back</button>
             <button id="next-lowlevel" class="finish-button">Finish</button>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Linear Search Page</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="static/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
@@ -24,7 +24,7 @@
                 </ul>
             </nav>
         </div>
-    </header>   
+    </header>
     <div class="page-content">
         <h1 class="title">Linear Search Algorithm</h1>
 
@@ -32,7 +32,23 @@
             <h2 class="section-title">High-Level Overview</h2>
             <img class="high-level-img" src="" /> <!-- PROVIDE THE IMAGE HERE -->
             <p class="section-content">
-                Explanation for the Algorithm <!-- PROVIDE THE EXPLANATION HERE -->
+                <ol>
+                    <li>You start by examining the first element in the collection. If this element
+                        is the one you're searching for, the search is complete, and you can return
+                        the index of this element. </li>
+                    <li>If it's not the item you're looking for, you move on
+                        to the next element in the collection. </li>
+                    <li>Continue this process, checking each element
+                        one by one. If you reach an element that matches the search item, return the index of
+                        that element.</li>
+                    <li>If you examine all the elements and none of them match the search item,
+                        the item isn't in the collection. In this case, you return a result indicating that the
+                        item was not found, often -1 or another specific indicator of a failed search. </li>
+                </ol>
+                This method is straightforward but can be inefficient for large collections because, in the
+                worst case, it requires checking every single element. However, it is a universally
+                applicable method, as it doesn't require the data to be sorted or structured in any
+                particular way.
             </p>
             <button id="next-overview" class="next-button">Next</button>
         </section>
@@ -40,7 +56,11 @@
         <section id="pseudocode" class="section" style="display: none">
             <h2 class="section-title">Pseudocode</h2>
             <p class="section-content">
-                More explanation for pseudocode <!-- PROVIDE MORE EXPLANATION HERE -->
+                function linearSearch(array, target)
+                <br>for index from 0 to length of array - 1
+                <br>    if array[index] == target
+                <br>        return index  // Found the target, return its index
+                <br>return -1  // Target not found in the array
             </p>
             <button id="back-to-overview" class="back-button">Back</button>
             <button id="next-overview" class="next-button">Next</button>
@@ -49,7 +69,11 @@
         <section id="low-level" class="section" style="display: none">
             <h2 class="section-title">Low-Level Implementation</h2>
             <pre class="section-content">
-                Low-Level code  <!-- PROVIDE THE CODE HERE -->
+                def linear_search(array, target):
+                for index in range(len(array)):
+                    if array[index] == target:
+                        return index  # Found the target, return its index
+                return -1  # Target not found in the array
             </pre>
             <button id="back-to-pseudocode" class="back-button">Back</button>
             <button id="next-lowlevel" class="finish-button">Finish</button>

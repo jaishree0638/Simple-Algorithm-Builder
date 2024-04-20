@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Selection Sort Page</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="static/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
@@ -24,7 +24,7 @@
                 </ul>
             </nav>
         </div>
-    </header>   
+    </header>
     <div class="page-content">
         <h1 class="title">Selection Sort Algorithm</h1>
 
@@ -32,7 +32,28 @@
             <h2 class="section-title">High-Level Overview</h2>
             <img class="high-level-img" src="" /> <!-- PROVIDE THE IMAGE HERE -->
             <p class="section-content">
-                Explanation for the Algorithm <!-- PROVIDE THE EXPLANATION HERE -->
+                <ol>
+                    <li>The process begins with the first element of the array, which is initially considered
+                        as the minimum for the current pass.</li>
+                    <li>The algorithm then scans through the remaining
+                        elements to find the smallest element in the unsorted segment of the array. During this
+                        search, each element is compared with the current minimum, and if a smaller element is found,
+                        it becomes the new minimum.</li>
+                    <li>Once the smallest element in the unsorted portion is identified,
+                        it is swapped with the element at the beginning of the unsorted segment. This effectively places
+                        the smallest unsorted element into its correct sorted position in the array.</li>
+                    <li>After the swap, the boundary of the sorted segment of the array moves one position right,
+                        and the process is repeated for the next unsorted portion of the array.</li>
+                    <li>This continues, moving
+                        from the start of the array to the second element, then the third, and so forth, incrementally
+                        reducing the size of the unsorted segment with each pass through the array. The algorithm continues
+                        until it has processed all elements except for the last one, which naturally falls into place. The
+                        array is now sorted in ascending order. </li>
+                </ol>
+                Selection sort is known for its simplicity but is generally
+                inefficient on large datasets with a time complexity of O(n^2). However, its lack of complexity makes
+                it useful for teaching purposes and in scenarios where the data set is small and simplicity is valued
+                over efficiency.
             </p>
             <button id="next-overview" class="next-button">Next</button>
         </section>
@@ -40,7 +61,15 @@
         <section id="pseudocode" class="section" style="display: none">
             <h2 class="section-title">Pseudocode</h2>
             <p class="section-content">
-                More explanation for pseudocode <!-- PROVIDE MORE EXPLANATION HERE -->
+                function selectionSort(array)
+                <br>n = length of array
+                <br>for i from 0 to n - 2
+                <br>    minIndex = i
+                <br>    for j from i + 1 to n - 1
+                <br>        if array[j] < array[minIndex]
+                <br>            minIndex = j
+                <br>    if minIndex != i
+                <br>        swap array[i] with array[minIndex]
             </p>
             <button id="back-to-overview" class="back-button">Back</button>
             <button id="next-overview" class="next-button">Next</button>
@@ -49,7 +78,16 @@
         <section id="low-level" class="section" style="display: none">
             <h2 class="section-title">Low-Level Implementation</h2>
             <pre class="section-content">
-                Low-Level code  <!-- PROVIDE THE CODE HERE -->
+                def selection_sort(array):
+                n = len(array)
+                for i in range(n - 1):
+                    min_index = i
+                    for j in range(i + 1, n):
+                        if array[j] < array[min_index]:
+                            min_index = j
+                    # Swap the found minimum element with the first element
+                    if min_index != i:
+                        array[i], array[min_index] = array[min_index], array[i]
             </pre>
             <button id="back-to-pseudocode" class="back-button">Back</button>
             <button id="next-lowlevel" class="finish-button">Finish</button>
