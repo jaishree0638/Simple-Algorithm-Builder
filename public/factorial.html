@@ -17,8 +17,8 @@
                         <div class="dropdown-content">
                             <a href="index.html">Home</a>
                             <a href="gcd.html">Greatest Common Denominator</a>
-                            <a href="sort.html">Sort</a>
-                            <a href="search.html">Search</a>
+                            <a href="selec-sort.html">Selection Sort</a>
+                            <a href="lin-search.html">Linear Search</a>
                         </div>
                     </li>
                 </ul>
@@ -27,6 +27,42 @@
     </header>   
     <div class="page-content">
         <h1 class="title">Factorial Algorithm</h1>
+
+        <section id="overview" class="section">
+            <h2 class="section-title">High-Level Overview</h2>
+            <img class="high-level-img" src="" /> <!-- PROVIDE THE IMAGE HERE -->
+            <p class="section-content">
+                Explanation for the Algorithm <!-- PROVIDE THE EXPLANATION HERE -->
+            </p>
+            <button id="next-overview" class="next-button">Next</button>
+        </section>
+
+        <section id="pseudocode" class="section" style="display: none">
+            <h2 class="section-title">Pseudocode</h2>
+            <p class="section-content">
+                More explanation for pseudocode <!-- PROVIDE MORE EXPLANATION HERE -->
+            </p>
+            <button id="back-to-overview" class="back-button">Back</button>
+            <button id="next-overview" class="next-button">Next</button>
+        </section>
+
+        <section id="low-level" class="section" style="display: none">
+            <h2 class="section-title">Low-Level Implementation</h2>
+            <pre class="section-content">
+                Low-Level code  <!-- PROVIDE THE CODE HERE -->
+            </pre>
+            <button id="back-to-pseudocode" class="back-button">Back</button>
+            <button id="next-lowlevel" class="finish-button">Finish</button>
+        </section>
+
+        <section id="finished" class="section" style="display: none">
+            <p class="section-content">
+                Congratulations, you have finished the learning path! Continue on
+                and learn all the algorithms that we provide!
+            </p>
+            <button id="back-to-lowlevel" class="back-button">Back</button>
+            <button class="completed-button" onclick="window.location.href='index.html';">Back Home</button>
+        </section>
     </div>
 
     <script src="js/script.js"></script>
