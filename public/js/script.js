@@ -2,6 +2,10 @@ document.addEventListener("DOMContentLoaded", function() {
     const dropdownToggle = document.querySelector('.dropbtn');
     const dropdownContent = document.querySelector('.dropdown-content');
     const pageContent = document.querySelector('.page-content');
+    const lowLevelButton = document.getElementById('next-lowlevel');
+    const backButtonOverview = document.getElementById('back-to-overview');
+    const backButtonPseudocode = document.getElementById('back-to-pseudocode');
+    const backButtonLowLevel = document.getElementById('back-to-lowlevel');
 
     dropdownToggle.addEventListener('click', function(event) {
         event.stopPropagation();
@@ -23,4 +27,47 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         }
     });
+
+    // Event delegation for "Next" buttons
+    document.addEventListener('click', function(event) {
+        if (event.target.classList.contains('next-button')) {
+            const currentSection = event.target.closest('.section');
+            const nextSection = currentSection.nextElementSibling;
+            if (nextSection) {
+                currentSection.style.display = 'none';
+                nextSection.style.display = 'block';
+            }
+        }
+    });
+
+    lowLevelButton.addEventListener('click', function() {
+        const lowLevelSection = document.getElementById('low-level');
+        lowLevelSection.style.display = 'none';
+        const congratsSection = document.getElementById('finished');
+        congratsSection.style.display = 'block';
+    });
+
+    backButtonOverview.addEventListener('click', function() {
+        toggleSection('overview');
+    });
+
+    backButtonPseudocode.addEventListener('click', function() {
+        toggleSection('pseudocode');
+    });
+
+    backButtonLowLevel.addEventListener('click', function() {
+        toggleSection('low-level');
+    });
+
+    function toggleSection(sectionId) {
+        // Hide all sections
+        const sections = document.querySelectorAll('.section');
+        sections.forEach(function(section) {
+            section.style.display = 'none';
+        });
+
+        // Show the targeted section
+        const targetSection = document.getElementById(sectionId);
+        targetSection.style.display = 'block';
+    }
 });
