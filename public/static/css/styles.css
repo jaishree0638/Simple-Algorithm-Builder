@@ -65,7 +65,11 @@ nav ul li a:hover {
 /* Page content styles */
 .page-content {
     text-align: center;
-    margin-top: 60px; /* Adjust margin top to leave space for the navbar */
+    margin-top: 100px; /* Adjust margin top to leave space for the navbar */
+    margin-left: 160px;
+    margin-right: 160px;
+    margin-bottom: 100px;
+    word-wrap :break-word;
     transition: margin-top 0.5s; /* Add transition effect for smooth animation */
 }
 
