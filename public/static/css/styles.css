@@ -1,11 +1,11 @@
+/**/
 /* Navbar styles */
 nav {
     background-color: #00274C; /*top bar*/
     padding: 10px 0;
-    position: relative;
+    position: fixed;
     top: 0;
     left: 0;
-    right: 0px;
     width: 100%;
     z-index: 1000; /* Ensure the navbar is above other content */
 }
@@ -18,39 +18,35 @@ nav ul {
 }
 
 nav ul li {
-    display: inline; /*inline/flex //test purp only//*/
+    display: inline; 
 }
 
-/*burg button*/
+
 nav ul li a {
     color: #FFCB05; /*#FFCB05*/
     text-decoration: none;
     padding: 10px;
 }
 
-nav ul li a:focus { /*done*/
-    background-color: transparent; 
-}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
+nav ul li a:hover { 
+    background-color: #FFCB05; /*#FFCB05*/
 }
 
 /* Dropdown content styles */
-.dropdown-content li { /* :focus-visible adds the links to nav bar, does not toggle off, inline shows links, but messes with format*/
-    display: inline-block; /*changed, allowed links to display, inline-block*/
+.dropdown-content { /* :focus-visible adds the links to nav bar, does not toggle off, inline shows links, but messes with format*/
+    display: none; /*changed, allowed links to display, inline-block*/
     position: absolute;
     top: 100%; /* Position below the navbar */
     left: 0;
     width: 100%; /*changed to 80, added margin*/
-    margin: auto;
-    background-color: #12e72b; /*#00274C act- color// test color//*/
+    background-color: #00274C; /*#00274C // test color//*/
     z-index: 999; /* Ensure the dropdown is above other content */
-    padding: 100px 0;
+    padding: 10px 0;
     box-sizing: border-box;
     
 }
+
+.dropdown-content.show {display: block;}
 
 /*link/text*/
 .dropdown-content a {
@@ -62,21 +58,14 @@ nav ul li a:focus { /*done*/
 }
 
 /*box around text*/
-.dropdown-content ul {
-    display: none; /*#FFCB05*/
-    position: absolute;
-    left: 0;
-    top: 100%;
+.dropdown-content a:hover {
+    background-color: #FFCB05;
 }
-
-/*may delete*/
-.dropdown-content li :hover > ul {display: block;}
-
 
 /* Page content styles */
 .page-content {
     text-align: center;
     margin-top: 60px; /* Adjust margin top to leave space for the navbar */
     transition: margin-top 0.5s; /* Add transition effect for smooth animation */
-
 }
+
