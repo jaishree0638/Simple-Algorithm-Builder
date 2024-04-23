@@ -62,6 +62,54 @@ nav ul li a:hover {
     background-color: #FFCB05;
 }
 
+.next-button {
+    background-color: #00274C;
+    border: none;
+    color: #FFCB05;
+    padding: 8px 18px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10 px;
+    margin: 4px 2px;
+  }
+
+  .back-button {
+    background-color: #00274C;
+    border: none;
+    color: #FFCB05;
+    padding: 8px 18px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10 px;
+    margin: 4px 2px;
+  }
+
+  .finish-button {
+    background-color: #00274C;
+    border: none;
+    color: #FFCB05;
+    padding: 8px 18px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10 px;
+    margin: 4px 2px;
+  }
+
+  .completed-button {
+    background-color: #00274C;
+    border: none;
+    color: #FFCB05;
+    padding: 8px 18px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10 px;
+    margin: 4px 2px;
+  }
+
 /* Page content styles */
 .page-content {
     text-align: center;
